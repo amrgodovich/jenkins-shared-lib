@@ -5,14 +5,14 @@ pipeline {
     tools { maven 'Maven-3.8.9' }
 
     environment {
-        IMG = "amrgodovich/shared-lib-jenkins"
+        IMG = "amrgodovich/shared-lib-jenkins-libb"
         TAG = "${BUILD_NUMBER}"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/amrgodovich/jenkins-lab2'
+                git branch: 'main', url: 'https://github.com/amrgodovich/neww'
             }
         }
 
