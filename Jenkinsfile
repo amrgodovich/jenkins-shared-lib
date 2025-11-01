@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/amrgodovich/python-iti-main-jenkins'
+                git branch: 'main', url: 'https://github.com/amrgodovich/jenkins-lab2'
             }
         }
 
