@@ -5,14 +5,14 @@ pipeline {
     tools { maven 'Maven-3.8.9' }
 
     environment {
-        IMG = "beshoybotros/shared-lib-jenkins"
+        IMG = "amrgodovich/shared-lib-jenkins"
         TAG = "${BUILD_NUMBER}"
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/BeshoiBotros/python-iti-main-jenkins'
+                git branch: 'main', url: 'https://github.com/amrgodovich/python-iti-main-jenkins'
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
 
         stage('Docker Login') {
             steps {
-                dockerLogin("beshoybotros", "dockerhub-pass")
+                dockerLogin("amrgodovich", "dockerhub-pass")
             }
         }
 
